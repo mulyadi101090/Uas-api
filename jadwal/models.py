@@ -14,6 +14,7 @@ class Guru(models.Model):
 class MataPelajaran(models.Model):
     id_mata_pelajaran = models.AutoField(primary_key=True)
     mata_pelajaran = models.CharField(max_length=100)
+    
     hari = models.CharField(max_length=20)
     waktu_mulai = models.TimeField()
     waktu_selesai = models.TimeField()
@@ -24,6 +25,7 @@ class MataPelajaran(models.Model):
 
 class Ruangan(models.Model):
     id_ruangan = models.AutoField(primary_key=True)
+    
     nama_ruangan = models.CharField(max_length=100)
 
     def __str__(self):
